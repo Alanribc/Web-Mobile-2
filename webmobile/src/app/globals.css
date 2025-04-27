@@ -10,6 +10,20 @@ nav {
     justify-content: space-around;
 }
 
+ul{
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    list-style-type: none;
+    text-decoration: none;
+    color: var(--text-color);
+    align-items: center;
+}
+
+li{
+    text-decoration: none;
+}
+
 :root {
     --bg-color: rgb(255, 255, 255);
     --text-color: black;
