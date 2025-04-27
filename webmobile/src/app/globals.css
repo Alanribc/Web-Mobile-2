@@ -6,7 +6,8 @@
 
 nav {
     background-color: blue;
-
+    display: flex;
+    justify-content: space-around;
 }
 
 :root {
@@ -23,4 +24,55 @@ body{
     background-color: var(--bg-color);
     color: var(--text-color);
     transition: background-color 0.3s, color 0.3s;
+    margin: 0;
+    padding: 0;
 }
+
+
+/*botão tema */
+.botao input{
+    opacity: 0;
+    width: 0;
+    height: 0;
+    position: absolute;
+}
+
+.botao {
+    border-radius: 15px;
+    display: inline-block;
+    position: relative;
+    width: 60px;
+    height: 34px;
+    background-color: #514f4f;
+    /*border: rgb(255, 255, 255);*/
+}
+
+.slider {
+    border-radius: 50%;
+    cursor: pointer;
+    height: 30px;
+    width: 30px;
+    /*transform: scale(0.8);*/
+    position: absolute;
+    top: 2px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transition: .4s;
+}
+
+.slider::before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    border-radius: 50%;
+    transition: .4s;
+  }
+
+  input:checked + .slider::before {
+    transform: translateX(26px);
+  }

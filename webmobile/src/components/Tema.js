@@ -1,9 +1,11 @@
+'use client';
+
 import { useEffect, useState } from "react";
 
 export default function Tema() {
     const [darkMode, setDarkMode] = useState(false);
 
-    useEffect(() {
+    useEffect(() => {
         if (darkMode) {
             document.body.classList.add('dark-mode');
         }
@@ -17,6 +19,9 @@ export default function Tema() {
     }
 
     return(
-        <label><div></div></label>
+        <label className = "botao">
+            <input type = "checkbox" checked = {darkMode} onChange = {trocaTema}/>
+            <span className = "slider"></span>
+        </label>
     );
 }
