@@ -1,0 +1,26 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 1px solid red;
+}
+
+nav {
+    background-color: blue;
+
+}
+
+:root {
+    --bg-color: rgb(255, 255, 255);
+    --text-color: black;
+}
+
+.dark-mode {
+    --bg-color: rgb(137, 137, 137);
+    --text-color: white;
+}
+
+body{
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.3s, color 0.3s;
+}
