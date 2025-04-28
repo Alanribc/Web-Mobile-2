@@ -19,9 +19,13 @@ export default function Tema() {
     }
 
     return(
-        <label className = "botao">
-            <input type = "checkbox" checked = {darkMode} onChange = {trocaTema}/>
-            <span className = "slider"></span>
-        </label>
+        <section className = "secaoTema">
+            <h1>Tema:</h1>
+            <label className = "botao">
+                <input type = "checkbox" checked = {darkMode} onChange = {trocaTema}/>
+                <span className = "slider"></span>
+            </label>
+        </section>
+        
     );
 }

@@ -90,3 +90,8 @@ body{
   input:checked + .slider::before {
     transform: translateX(26px);
   }
+
+  .secaoTema{
+    display: flex;
+    align-items: center;
+  }
