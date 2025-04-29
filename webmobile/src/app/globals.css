@@ -1,13 +1,22 @@
-* {
+/** {
     margin: 0;
     padding: 0;
     border: 1px solid red;
-}
+}*/
 
 nav {
     background-color: blue;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.logomenu{
+    display: flex;
+    gap: 50px;
 }
 
 ul{
@@ -32,6 +41,7 @@ li{
 .dark-mode {
     --bg-color: rgb(137, 137, 137);
     --text-color: white;
+    --footer: rgb(83, 81, 81);
 }
 
 body{
@@ -87,11 +97,41 @@ body{
     transition: .4s;
   }
 
-  input:checked + .slider::before {
+input:checked + .slider::before {
     transform: translateX(26px);
-  }
-
-  .secaoTema{
+}
+/*restante*/
+.secaoTema{
     display: flex;
     align-items: center;
-  }
+}
+
+footer{
+    position: absolute;
+    bottom: 0;
+    margin: 0;
+    padding: 0;
+    background-color: var(--footer);
+    width: 100%;
+}
+
+.artigoFooter{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.artigoFooterDois{
+    display: flex;
+    flex-direction: column;
+}
+
+body{
+    padding: 0;
+    margin: 0;
+}
+p{
+    margin: 0;
+    padding: 0;
+}
