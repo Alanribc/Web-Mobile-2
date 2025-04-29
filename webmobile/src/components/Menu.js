@@ -13,8 +13,8 @@ export default function Menu() {
                 alt = "Logo"
                 />
                 <ul>
-                    <li><Link href = "/">Home</Link></li>
-                    <li><Link href = "/">Sobre</Link></li>
+                    <li><Link href = "/" className="links">Home</Link></li>
+                    <li><Link href = "/" className="links">Sobre</Link></li>
                 </ul>
             </section>
             <Tema />

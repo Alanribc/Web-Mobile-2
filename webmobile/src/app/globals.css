@@ -5,7 +5,7 @@
 }*/
 
 nav {
-    background-color: blue;
+    background-color: rgb(37, 37, 149);
     display: flex;
     justify-content: space-between;
     position: fixed;
@@ -29,19 +29,21 @@ ul{
     align-items: center;
 }
 
-li{
+.links{
     text-decoration: none;
+    color: black;
 }
 
 :root {
-    --bg-color: rgb(255, 255, 255);
+    --bg-color: rgb(225, 225, 225);
     --text-color: black;
+    --colorArticle: white;
 }
 
 .dark-mode {
     --bg-color: rgb(137, 137, 137);
     --text-color: white;
-    --footer: rgb(83, 81, 81);
+    --colorArticle: rgb(186, 186, 186);
 }
 
 body{
@@ -62,13 +64,13 @@ body{
 }
 
 .botao {
-    border-radius: 15px;
+    border-radius: 20px;
     display: inline-block;
     position: relative;
     width: 60px;
     height: 34px;
     background-color: #514f4f;
-    /*border: rgb(255, 255, 255);*/
+    border: 2.5px solid black;
 }
 
 .slider {
@@ -113,10 +115,15 @@ footer{
     padding: 0;
     background-color: var(--footer);
     width: 100%;
+    background-color: rgb(83, 81, 81);
+}
+
+footer p {
+    color: black;
 }
 
 .artigoFooter{
-    margin: 0;
+    margin: 5px;
     padding: 0;
     display: flex;
     flex-direction: column;
@@ -125,6 +132,7 @@ footer{
 .artigoFooterDois{
     display: flex;
     flex-direction: column;
+    margin: 5px;
 }
 
 body{
@@ -134,4 +142,17 @@ body{
 p{
     margin: 0;
     padding: 0;
+}
+
+.mainPrincipal{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.article1{
+    background-color: var(--colorArticle);
+    color: black;
+    border-radius: 5px;
+    padding: 5px;
 }
