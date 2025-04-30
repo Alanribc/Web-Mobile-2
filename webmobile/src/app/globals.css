@@ -192,3 +192,62 @@ p{
 .articleSobre p{
     color: black;
 }
+
+.imagem{
+    width:80px;
+    height: 80px
+}
+
+@media (max-width: 768px) {
+    .article1{
+        width: 80%;
+    }
+    
+    .imagem{
+        width: 45px;
+        height: 45px;
+    }
+    .logomenu{
+        display: flex;
+        align-items: center
+    }
+}
+
+@media (max-width: 450px){
+    .links{
+        font-weight: 15px;
+    }
+    .logomenu{
+        gap: 10px;
+    }
+    .botao {
+        border-radius: 10px;
+        width: 30px;
+        height: 18px;
+        border: 2.5px solid black;
+    }
+    
+    .slider {
+        height: 15px;
+        width: 15px;
+    }
+    
+    .slider::before {
+        height: 13px;
+        width: 13px;
+      }
+    
+    input:checked + .slider::before {
+        transform: translateX(13px);
+    }
+    
+}
+
+@media (max-width: 365px) {
+    .logomenu{
+        gap: 0;
+    }
+    ul{
+        padding-left: 5px;
+    }
+}

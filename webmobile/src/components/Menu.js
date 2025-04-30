@@ -8,9 +8,10 @@ export default function Menu() {
             <section className = "logomenu">
                 <Image 
                 src = "/images/play.png"
-                width = {80}
-                height = {80}
+                width = {50}
+                height = {50}
                 alt = "Logo"
+                className="imagem"
                 />
                 <ul>
                     <li><Link href = "/" className="links">Home</Link></li>
