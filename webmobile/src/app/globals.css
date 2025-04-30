@@ -5,7 +5,7 @@
 }*/
 
 nav {
-    background-color: rgb(41, 41, 180);
+    background-color: var(--nav-tema);
     display: flex;
     justify-content: space-between;
     position: fixed;
@@ -31,19 +31,26 @@ ul{
 
 .links{
     text-decoration: none;
-    color: black;
+    color: var(--text-color);
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
 }
 
 :root {
     --bg-color: rgb(225, 225, 225);
-    --text-color: black;
+    --text-color: white;
     --colorArticle: white;
+    --nav-tema: rgb(41, 41, 180);
+    --texto-article: black;
 }
 
 .dark-mode {
     --bg-color: rgb(137, 137, 137);
-    --text-color: white;
+    --text-color: black;
     --colorArticle: rgb(186, 186, 186);
+    --nav-tema: rgb(9, 9, 139);
+    --texto-article: rgb(255, 255, 255);
 }
 
 body{
@@ -80,7 +87,7 @@ body{
     width: 30px;
     /*transform: scale(0.8);*/
     position: absolute;
-    top: 2px;
+    top: 3.5px;
     bottom: 0;
     left: 0;
     right: 0;
@@ -148,6 +155,7 @@ p{
     display: flex;
     align-items: center;
     flex-direction: column;
+    padding-top: 100px;
 }
 
 .article1{
@@ -155,4 +163,32 @@ p{
     color: black;
     border-radius: 5px;
     padding: 5px;
+}
+
+.secaoSobre{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.articleSobre{
+    display:flex;
+    flex-direction: column;
+    width: 80%;
+    background-color: var(--colorArticle);
+    border-radius: 15px;
+    padding: 5px;
+}
+
+.mainSobre{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-top: 100px;
+}
+
+.articleSobre p{
+    color: black;
 }
