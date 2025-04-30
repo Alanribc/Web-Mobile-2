@@ -120,7 +120,6 @@ footer{
     bottom: 0;
     margin: 0;
     padding: 0;
-    background-color: var(--footer);
     width: 100%;
     background-color: rgb(83, 81, 81);
 }
@@ -163,6 +162,7 @@ p{
     color: black;
     border-radius: 5px;
     padding: 5px;
+    width: 80%;
 }
 
 .secaoSobre{
