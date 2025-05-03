@@ -155,6 +155,7 @@ p{
     align-items: center;
     flex-direction: column;
     padding-top: 100px;
+    gap:10px;
 }
 
 .article1{
@@ -163,6 +164,21 @@ p{
     border-radius: 5px;
     padding: 5px;
     width: 80%;
+}
+
+.article2{
+    background-color: var(--colorArticle);
+    color: black;
+    border-radius: 5px;
+    padding: 5px;
+    width: 80%;
+}
+
+
+label{
+    width: 10px;
+    height: 10px;
+    background-color: black;
 }
 
 .secaoSobre{
