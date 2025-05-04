@@ -8,12 +8,13 @@ export default function Home() {
         <p>Através da API, você poderá consultar uma grande diversidade de filmes</p>
       </article>
       <article className = "article2">
-        <section>
+        <section className="secaoBarra">
           <input
           type = "text"
           placeholder="Digite o nome do filme:"
           //value:
           //onChange= 
+          className="barraPesquisa"
           >
           </input>
         </section>

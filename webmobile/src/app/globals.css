@@ -175,12 +175,17 @@ p{
 }
 
 
-label{
-    width: 10px;
-    height: 10px;
-    background-color: black;
+.barraPesquisa{
+    width: 80%;
+    border: 3px solid black;
+    border-radius: 5px;
 }
 
+.secaoBarra{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
 .secaoSobre{
     display:flex;
     align-items: center;
