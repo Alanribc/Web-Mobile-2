@@ -158,6 +158,15 @@ p{
     gap:10px;
 }
 
+.mainFilme{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 100px;
+    gap:10px;
+    padding-top: 200px;
+} 
+
 .article1{
     background-color: var(--colorArticle);
     color: black;
