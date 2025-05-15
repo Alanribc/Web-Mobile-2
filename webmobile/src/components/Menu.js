@@ -15,7 +15,7 @@ export default function Menu() {
                 />
                 <ul>
                     <li><Link href = "/" className="links">Home</Link></li>
-                    <li><Link href = "/favoritos" className="links">Favoritos</Link></li>
+                    <li><Link href = "/filmes" className="links">Filmes</Link></li>
                     <li><Link href = "/sobre" className="links">Sobre</Link></li>
                 </ul>
             </section>

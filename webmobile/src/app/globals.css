@@ -43,6 +43,8 @@ ul{
     --colorArticle: white;
     --nav-tema: rgb(41, 41, 180);
     --texto-article: black;
+    --borda: 2px 2px 2px 2px rgb(136, 134, 134);
+
 }
 
 .dark-mode {
@@ -51,6 +53,12 @@ ul{
     --colorArticle: rgb(186, 186, 186);
     --nav-tema: rgb(9, 9, 139);
     --texto-article: rgb(255, 255, 255);
+    --borda: 2px 2px 2px 2px rgb(117, 116, 116);
+}
+
+.divFilmes{
+    display: flex;
+    flex-wrap: wrap;
 }
 
 body{
@@ -167,12 +175,26 @@ p{
     padding-top: 200px;
 } 
 
+.centralizado{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+}
+
+.centralizado h1 {
+    padding: 0;
+    margin: 0;
+}
+
 .article1{
     background-color: var(--colorArticle);
     color: black;
     border-radius: 5px;
     padding: 5px;
     width: 80%;
+    box-shadow: var(--borda);
 }
 
 .article2{
@@ -181,6 +203,7 @@ p{
     border-radius: 5px;
     padding: 5px;
     width: 80%;
+    box-shadow: var(--borda);
 }
 
 
@@ -210,6 +233,7 @@ p{
     background-color: var(--colorArticle);
     border-radius: 15px;
     padding: 5px;
+    box-shadow: var(--borda);
 }
 
 .mainSobre{

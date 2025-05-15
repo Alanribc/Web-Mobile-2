@@ -18,8 +18,7 @@ export default function Home() {
           >
           </input>
         </section>
-        <p>Nome:{}</p>
-        
+        <p>Nome:{}</p>        
       </article>
     </main>
     
