@@ -56,9 +56,16 @@ ul{
     --borda: 2px 2px 2px 2px rgb(117, 116, 116);
 }
 
-.divFilmes{
+.capaFilmes{
     display: flex;
     flex-wrap: wrap;
+    gap: 10px;
+}
+
+.capa{
+    border-radius: 10px;
+    width: 200px;
+    height: 300px;
 }
 
 body{
