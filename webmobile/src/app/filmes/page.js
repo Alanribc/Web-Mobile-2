@@ -12,6 +12,7 @@ export default function Filme() {
         return acumulador + 1;
     },0);
 
+    
     return(
         <main className="mainPrincipal">
             <article className="article1">
