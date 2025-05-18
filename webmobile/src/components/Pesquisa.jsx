@@ -5,6 +5,7 @@ export default function Pesquisa(){
     const [ano, setAno] = useState("");
     const [descricao, setDescricao] = useState("");
 
+    
     const buscar = async() => {
         try{
             const resp = await fetch("https://api.themoviedb.org/3/search/movie?api_key=d3bb84ede80dc92a552c391613321c4b&query="+nomes);
@@ -28,7 +29,7 @@ export default function Pesquisa(){
     const filmesJSX = filmes.map((f) => {
         return (
             <div>
-                
+
             </div>
         )
     })
