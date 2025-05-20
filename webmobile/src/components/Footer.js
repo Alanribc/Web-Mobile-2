@@ -4,6 +4,7 @@ export default function Footer () {
         <footer>
             <article className="artigoFooter">
                 <p>Projeto 2 de Web Mobile</p>
+                <p>Turma: 2J</p>
                 <p>Desenvolvido por:</p>
             </article>
             <article className="artigoFooterDois">
