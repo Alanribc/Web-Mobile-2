@@ -22,10 +22,13 @@ export default function RootLayout({ children }) {
   return (
     <html lang="pt-br">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        <Menu />
-        {children}
-        <Footer />
+        <div className="layoutContainer">
+          <Menu />
+          <main>{children}</main>
+          <Footer />
+        </div>
       </body>
     </html>
   );
 }
+

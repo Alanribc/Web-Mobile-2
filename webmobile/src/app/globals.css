@@ -4,6 +4,19 @@
     border: 1px solid red;
 }*/
 
+html {
+    height: 100%;
+}
+
+body{
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.3s, color 0.3s;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
 nav {
     background-color: var(--nav-tema);
     display: flex;
@@ -12,6 +25,16 @@ nav {
     top: 0;
     left: 0;
     width: 100%;
+}
+
+.layoutContainer {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.layoutContainer > main {
+    flex: 1;
 }
 
 .logomenu{
@@ -62,20 +85,12 @@ ul{
     gap: 10px;
 }
 
-.capa{
+.capa {
     border-radius: 10px;
-    width: 200px;
-    height: 300px;
+    width: 100%;
+    max-width: 200px;
+    height: auto;
 }
-
-body{
-    background-color: var(--bg-color);
-    color: var(--text-color);
-    transition: background-color 0.3s, color 0.3s;
-    margin: 0;
-    padding: 0;
-}
-
 
 /*botão tema */
 .botao input{
@@ -130,14 +145,13 @@ input:checked + .slider::before {
     align-items: center;
 }
 
-footer{
-    position: absolute;
-    bottom: 0;
+footer {
     margin: 0;
     padding: 0;
     width: 100%;
     background-color: rgb(83, 81, 81);
 }
+
 
 footer p {
     color: black;
@@ -260,7 +274,22 @@ p{
     height: 80px
 }
 
+.divFilmes {
+    flex: 1 1 200px;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+
 @media (max-width: 768px) {
+
+    nav {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+
     .article1{
         width: 80%;
     }
@@ -270,8 +299,24 @@ p{
         height: 45px;
     }
     .logomenu{
-        display: flex;
-        align-items: center
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    ul {
+        flex-direction: column;
+        gap: 5px;
+        padding: 0;
+    }
+
+    .links {
+        font-size: 14px;
+        padding: 4px 0;
+    }
+
+    .secaoTema {
+        margin-top: 10px;
     }
 }
 
@@ -306,10 +351,80 @@ p{
 }
 
 @media (max-width: 365px) {
-    .logomenu{
+    .logomenu {
         gap: 0;
     }
-    ul{
+    ul {
         padding-left: 5px;
     }
 }
+
+@media screen and (max-width: 768px) {
+    .mainFilme {
+        padding-top: 80px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .article1 {
+        width: 90%;
+        padding: 10px;
+        border-radius: 10px;
+    }
+
+    .centralizado {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        gap: 10px;
+    }
+
+    .centralizado h1 {
+        font-size: 18px;
+        margin: 5px 0;
+    }
+
+    .capa {
+        width: 100%;
+        max-width: 200px;
+        height: auto;
+        border-radius: 12px;
+    }
+    
+    nav {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px 0;
+    }
+
+    .logomenu {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    ul {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        padding: 0;
+        margin: 0;
+    }
+
+    .links {
+        font-size: 14px;
+        padding: 4px 0;
+    }
+
+    .secaoTema {
+        margin-top: 10px;
+    }
+
+    .imagem {
+        width: 45px;
+        height: 45px;
+    }
+}
+
