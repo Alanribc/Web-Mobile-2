@@ -14,6 +14,7 @@ export default function Filme() {
     },0);
 
     
+    
     return(
         <main className="mainPrincipal">
             <article className="article1">
