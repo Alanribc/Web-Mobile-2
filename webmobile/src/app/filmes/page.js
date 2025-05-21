@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Filme() {
 
@@ -22,14 +23,17 @@ export default function Filme() {
                             filmes.map((f) => {
                                 return(
                                     <div key = {f.codigo} className="divFilmes">
-                                        <Image
-                                        width= {200}
-                                        height= {300}
-                                        src = {f.capa}
-                                        alt = {f.nome}
-                                        className="capa"
-                                        />
+                                        <Link href = {'\\filmes\\'+f.codigo}>
+                                            <Image
+                                                width= {200}
+                                                height= {300}
+                                                src = {f.capa}
+                                                alt = {f.nome}
+                                                className="capa"
+                                            />
+                                        </Link>
                                     </div>
+                                   
                                     
                                 )
                             })
