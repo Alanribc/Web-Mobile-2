@@ -1,4 +1,5 @@
 
+import Pesquisa from "@/components/Pesquisa";
 export default function Home() {
   return (
     <main className="mainPrincipal">
@@ -8,17 +9,7 @@ export default function Home() {
         <p>Através da API, você poderá consultar uma grande diversidade de filmes</p>
       </article>
       <article className = "article2">
-        <section className="secaoBarra">
-          <input
-          type = "text"
-          placeholder="Digite o nome do filme:"
-          //value:
-          //onChange= 
-          className="barraPesquisa"
-          >
-          </input>
-        </section>
-        <p>Nome:{}</p>        
+        <Pesquisa />     
       </article>
     </main>
     
