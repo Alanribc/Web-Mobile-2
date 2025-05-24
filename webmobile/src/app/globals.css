@@ -230,6 +230,7 @@ main {
     padding: 5px;
     width: 80%;
     box-shadow: var(--borda);
+    margin-bottom: 50px;
 }
 
 
@@ -244,6 +245,11 @@ main {
     align-items: center;
     display: flex;
     justify-content: center;
+    flex-direction: column;
+}
+
+.caixaPesquisa{
+    display: flex;
 }
 
 .secaoSobre {
@@ -300,7 +306,6 @@ main {
     text-overflow: ellipsis;
     display: -webkit-box;
     -webkit-line-clamp: 4;
-    /* mostra no máximo 4 linhas */
     -webkit-box-orient: vertical;
 }
 

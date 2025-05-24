@@ -1,5 +1,6 @@
 'use client';
 
+import Link from 'next/link';
 import { useState } from 'react';
 
 export default function Pesquisa() {
@@ -29,18 +30,21 @@ export default function Pesquisa() {
 
   return (
     <section className="secaoBarra">
-      <input
-        type="text"
-        value={query}
-        onChange={(e) => setQuery(e.target.value)}
-        placeholder="Digite o nome do filme"
-        className="barraPesquisa"
-      />
-      <button onClick={buscar} className="ml-2 p-2 bg-blue-500 text-white">
-        Buscar
-      </button>
+      <section className= "caixaPesquisa">
+        <input
+          type="text"
+          value={query}
+          onChange={(e) => setQuery(e.target.value)}
+          placeholder="Digite o nome do filme"
+          className="barraPesquisa"
+        />
+        <button onClick={buscar} className="ml-2 p-2 bg-blue-500 text-white">
+          Buscar
+        </button>
 
-      {erro && <p className="text-red-500 mt-2">{erro}</p>}
+        {erro && <p className="text-red-500 mt-2">{erro}</p>}
+
+      </section>
 
       <div className="capaFilmes">
         {filmes.map((f) => (
@@ -57,6 +61,9 @@ export default function Pesquisa() {
             <h2>{f.title}</h2>
             <p>{f.release_date || 'Data desconhecida'}</p>
             <p>{f.overview ? f.overview : 'Sem descrição'}</p>
+            <Link href = {`/filmes/${f.id}`}>
+              <button>Ver Mais</button>
+            </Link>
           </div>
         ))}
       </div>
