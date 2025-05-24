@@ -2,30 +2,17 @@
 
 import Link from 'next/link';
 import { useState } from 'react';
+import { Busca } from './Busca';
 
 export default function Pesquisa() {
   const [query, setQuery] = useState('');
   const [filmes, setFilmes] = useState([]);
   const [erro, setErro] = useState(null);
 
-  const buscar = async () => {
-    try {
-      const url = `https://api.themoviedb.org/3/search/movie?api_key=d3bb84ede80dc92a552c391613321c4b&query=${encodeURIComponent(query)}`;
-
-      const resp = await fetch(url);
-      const json = await resp.json();
-
-      if (json.errors || json.success === false) {
-        setErro('Filme não encontrado.');
-        setFilmes([]);
-      } else {
-        setFilmes(json.results);
-        setErro(null);
-      }
-    } catch (error) {
-      setErro('Erro na busca.');
-      setFilmes([]);
-    }
+  const handleBuscar = async () => {
+    const {filmes, erro} = await Busca(query);
+    setFilmes(filmes);
+    setErro(erro);
   };
 
   return (
@@ -38,7 +25,7 @@ export default function Pesquisa() {
           placeholder="Digite o nome do filme"
           className="barraPesquisa"
         />
-        <button onClick={buscar} className="ml-2 p-2 bg-blue-500 text-white">
+        <button onClick={handleBuscar} className="ml-2 p-2 bg-blue-500 text-white">
           Buscar
         </button>
 
