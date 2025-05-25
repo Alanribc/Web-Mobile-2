@@ -27,7 +27,7 @@ export default async function Filmes ({params}) {
                     )}
                     <h1 className="nome filme">Filme: {dados.title}</h1>
                     <h1> Ano: {dados.release_date?.split('-')[0] || "Desconhecido"}</h1>
-                    <Estrela />
+                    <Estrela filme = {dados}/>
                 </section>
                 <p>Descrição: {dados.overview || "Sem descrição."}</p>
             </article>

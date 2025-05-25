@@ -1,36 +1,35 @@
+'use client'
+
 import Image from "next/image";
 import Link from "next/link";
+import { useEffect, useState } from "react";
 
 export default function Filme() {
+    const [filmes, setFilmes] = useState([]);
 
-    const filmes = [
-        {codigo: 1, nome: "Shrek 1", ano: 2001, descricao: "Shrek e Burro", capa: "/images/shrek.jpg"},
-        {codigo: 2, nome: "Velozes e Furiosos 1", ano: 2001, descricao: "carro", capa: "/images/velozes.jpg"},
-        {codigo: 3, nome: "EuroTrip", ano: 2004, descricao: "besteirol", capa: "/images/eurotrip.jpg"}
-    ]
 
-    const qtdFilmes = filmes.reduce((acumulador) => {
-        return acumulador + 1;
-    },0);
-
+    useEffect(() => {
+        const filmesCurtidos = JSON.parse(localStorage.getItem('filmesCurtidos') || '[]');
+        setFilmes(filmesCurtidos);
+    }, []);
     
     
     return(
         <main className="mainPrincipal">
             <article className="article1">
-                <h1>Filmes: {qtdFilmes}</h1>
+                <h1>Filmes: {filmes.length}</h1>
                 <section className="capaFilmes">
                         {
                             filmes.map((f) => {
                                 return(
-                                    <div key = {f.codigo} className="divFilmes">
-                                        <Link href = {'\\filmes\\'+f.codigo}>
+                                    <div key = {f.id} className="divFilmes">
+                                        <Link href = {'\\filmes\\'+f.id}>
                                             <Image
                                                 width= {200}
                                                 height= {300}
-                                                src = {f.capa}
-                                                alt = {f.nome}
-                                                className="capa"
+                                                src = {`https://image.tmdb.org/t/p/w200${f.poster_path}`}
+                                                alt = {f.title}
+                                                className="capaLista"
                                             />
                                         </Link>
                                     </div>

@@ -1,13 +1,35 @@
 'use client'
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
-export default function Estrela(){
+export default function Estrela({filme}){
     const [curtido, setCurtido] = useState(false);
+
+    useEffect(() => {
+        const filmesCurtidos = JSON.parse(localStorage.getItem('filmesCurtidos') || '[]');
+        const jaCurtido = filmesCurtidos.some(f => f.id === filme.id);
+        setCurtido(jaCurtido);
+    }, [filme.id]);
+
+    const salvarFilme = () => {
+    const filmesCurtidos = JSON.parse(localStorage.getItem('filmesCurtidos') || '[]');
+
+    if (!curtido) {
+      filmesCurtidos.push(filme);
+      localStorage.setItem('filmesCurtidos', JSON.stringify(filmesCurtidos));
+    } else {
+      const filtrados = filmesCurtidos.filter(f => f.id !== filme.id);
+      localStorage.setItem('filmesCurtidos', JSON.stringify(filtrados));
+    }
+
+    setCurtido(!curtido);
+  };
+
+
 
     return (
         <svg 
-            onClick={() => setCurtido(!curtido)}
+            onClick={salvarFilme}
             xmlns="http://www.w3.org/2000/svg" 
             fill= {curtido ? "yellow" : "white"} 
             viewBox="0 0 24 24" 
