@@ -310,6 +310,12 @@ main {
     -webkit-box-orient: vertical;
 }
 
+.estrelaCurtir{
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+}
+
 
 @media (max-width: 768px) {
 

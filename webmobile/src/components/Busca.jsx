@@ -1,6 +1,6 @@
 export async function Busca (query){
     try {
-      const url = `https://api.themoviedb.org/3/search/movie?api_key=d3bb84ede80dc92a552c391613321c4b&query=${encodeURIComponent(query)}`;
+      const url = `https://api.themoviedb.org/3/search/movie?api_key=d3bb84ede80dc92a552c391613321c4b&language=pt-br&query=${encodeURIComponent(query)}`;
 
       const resp = await fetch(url);
       const json = await resp.json();

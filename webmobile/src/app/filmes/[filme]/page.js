@@ -1,4 +1,5 @@
 import { BuscaFilmePorId } from "@/components/BuscaID";
+import Estrela from "@/components/Estrela";
 import Image from "next/image";
 
 export default async function Filmes ({params}) {
@@ -26,6 +27,7 @@ export default async function Filmes ({params}) {
                     )}
                     <h1 className="nome filme">Filme: {dados.title}</h1>
                     <h1> Ano: {dados.release_date?.split('-')[0] || "Desconhecido"}</h1>
+                    <Estrela />
                 </section>
                 <p>Descrição: {dados.overview || "Sem descrição."}</p>
             </article>
