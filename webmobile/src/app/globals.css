@@ -85,6 +85,7 @@ ul {
     flex-wrap: wrap;
     gap: 20px;
     justify-content: center;
+    padding-bottom: 20px;
 }
 
 .capa {
@@ -222,6 +223,7 @@ main {
     padding: 5px;
     width: 80%;
     box-shadow: var(--borda);
+    margin-bottom: 50px;
 }
 
 .article2 {
@@ -287,7 +289,7 @@ main {
     height: 80px
 }
 
-.divFilmes {
+.sectionFilmes {
     flex: 1 1 200px;
     max-width: 200px;
     border: 1px solid #ccc;
@@ -300,7 +302,7 @@ main {
     justify-content: space-between;
 }
 
-.divFilmes p {
+.sectionFilmes p {
     font-size: 0.9rem;
     text-align: center;
     overflow: hidden;
@@ -376,7 +378,7 @@ main {
         border: 2.5px solid black;
     }
 
-    .divFilmes {
+    .sectionFilmes {
         flex: 1 1 45%;
         max-width: 45%;
     }
@@ -400,7 +402,7 @@ main {
         gap: 10px;
     }
 
-    .divFilmes {
+    .sectionFilmes {
         flex: 1 1 100%;
         max-width: 100%;
     }

@@ -33,9 +33,9 @@ export default function Pesquisa() {
 
       </section>
 
-      <div className="capaFilmes">
+      <section className="capaFilmes">
         {filmes.map((f) => (
-          <div key={f.id} className="divFilmes">
+          <section key={f.id} className="sectionFilmes">
             {f.poster_path ? (
               <img
                 src={`https://image.tmdb.org/t/p/w200${f.poster_path}`}
@@ -51,9 +51,9 @@ export default function Pesquisa() {
             <Link href = {`/filmes/${f.id}`}>
               <button>Ver Mais</button>
             </Link>
-          </div>
+          </section>
         ))}
-      </div>
+      </section>
     </section>
   );
 }

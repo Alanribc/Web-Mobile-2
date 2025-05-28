@@ -22,7 +22,7 @@ export default function Filme() {
                         {
                             filmes.map((f) => {
                                 return(
-                                    <div key = {f.id} className="divFilmes">
+                                    <section key = {f.id} className="sectionFilmes">
                                         <Link href = {'\\filmes\\'+f.id}>
                                             <Image
                                                 width= {200}
@@ -32,7 +32,7 @@ export default function Filme() {
                                                 className="capaLista"
                                             />
                                         </Link>
-                                    </div>
+                                    </section>
                                    
                                     
                                 )
