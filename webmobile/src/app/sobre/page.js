@@ -1,5 +1,3 @@
-import Filmes from "../filmes/[filme]/page";
-
 export default function Sobre(){
     return(
         <main className="mainSobre">
